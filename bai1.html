@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nguyento</title>
+</head>
+<body>
+<h1>Số nguyên tố</h1>
+<script>
+    let numbers = parseInt(prompt("Vui lòng nhập số lượng số nguyên tố đầu tiên cần in ra"));
+    let count = 0;
+    let result = "";
+    let num = 2;
+
+    while ( count < numbers){
+        let flag = false;
+        for (let i = 2; i < num -1; i++){
+            if (num % i ===0){
+                flag = true;
+                break;
+            }
+        }
+        if (flag === false) {
+            result += num + "<br>";
+            count +=1;
+        }
+        num++;
+    }
+    document.write(result)
+
+</script>
+</body>
+</html>
